@@ -1,0 +1,159 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+@font-face {
+  font-family: "Beleren";
+  src: url("../assets/typeface-beleren-bold-master/Beleren2016-Bold.ttf");
+}
+body {
+  font-family: "Beleren";
+  background-color: lightgrey;
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+
+}
+
+footer {
+  padding: 0 7.5%;
+  font-size: .7em;
+  text-align: right;
+
+}
+
+h1{
+  width: 100%;
+  font-size: 2em;
+  margin: .67em 0;
+  font-weight: bold;
+  justify-content: center;
+}
+
+h2 {
+  width: 100%;
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 3em;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.container{
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.colorMenu{
+  flex: 0 0 15%;
+  min-height: max-content;
+  padding: 2% .7%;
+}
+
+.colorPie {
+  flex: 0 0 70%;
+  height: 600px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 175px 0 0 0;
+  position: relative;
+}
+
+.colorPiePosition {
+  display: flex;
+  justify-content: center;
+}
+
+
+.manaSymbolPosition {
+  display: inline-block;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.manaSymbol {
+  height: 116px;
+  width: 116px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/mana_symbols.png");
+  opacity: 70%;
+}
+
+.colorName{
+  position: absolute;
+  bottom: 10%;
+  min-width: 20%;
+  text-align: center;
+}
+
+.manaSymbol:hover {
+  box-shadow: 0 0 10px 10px grey;
+}
+
+.selected {
+  border: 3px solid black;
+  opacity: 100%;
+}
+
+.ommited {
+  border: 3px solid grey;
+  opacity: 75%;
+}
+
+.collapsibleContent {
+  display: none;
+}
+
+.list {
+  padding-left: 10%;
+  font-size: 1.2em;
+  margin: 5px;
+}
+
+.list li, .colorMenu li{
+  margin: 5px;
+}
+
+.listHighlight{
+  font-size: larger;
+  color: purple;
+}
